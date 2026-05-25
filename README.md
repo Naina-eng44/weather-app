@@ -2,6 +2,9 @@
 ## Project Overview
 SkyCast is a modern and responsive weather dashboard web application that provides real-time weather information using OpenWeatherMap API.
 
+## Live Demo 
+https://weather-app-swart-five-36.vercel.app/
+
 # The application displays / Features:
 1. current weather
 2. hourly forecast
