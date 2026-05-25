@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SkyCast Weather Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- LEAFLET MAP -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body>
+
+    <div class="rain-container"></div>
+
+    <div class="container">
+
+        <!-- NAVBAR -->
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-cloud-sun"></i>
+
+                <h2>SkyCast</h2>
+
+            </div>
+
+            <button id="themeToggle">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+        </nav>
+
+
+        <!-- SEARCH SECTION -->
+
+        <div class="search-section">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text"
+                    id="cityInput"
+                    placeholder="Enter city name">
+
+        </div>
+
+            <button id="searchBtn">
+
+                Search
+
+            </button>
+
+            
+            <button id="locationBtn">
+
+                <i class="fa-solid fa-location-crosshairs"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- MAIN WEATHER CARD -->
+
+        <div class="weather-card">
+
+            <!-- LEFT -->
+
+            <div class="weather-left">
+
+                <img id="weatherIcon"
+                    src=""
+                    alt="Weather Icon">
+
+                <h2 id="temperature"></h2>
+
+                <p id="weatherCondition"></p>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="weather-right">
+
+                <h1 id="cityName"></h1>
+
+                <p id="dateTime"></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEATHER DETAILS -->
+
+        <div class="details-grid">
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-water"></i>
+
+                <h3>Humidity</h3>
+
+                <p id="humidity"></p>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-wind"></i>
+
+                <h3>Wind Speed</h3>
+
+                <p id="windSpeed"></p>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-temperature-half"></i>
+
+                <h3>Feels Like</h3>
+
+                <p id="feelsLike"></p>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-eye"></i>
+
+                <h3>Visibility</h3>
+
+                <p id="visibility"></p>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-sun"></i>
+
+                <h3>Sunrise</h3>
+
+                <p id="sunrise"></p>
+
+            </div>
+
+            <div class="detail-card">
+
+                <i class="fa-solid fa-moon"></i>
+
+                <h3>Sunset</h3>
+
+                <p id="sunset"></p>
+
+            </div>
+
+        </div>
+
+
+        <!-- AQI -->   
+
+        <div class="aqi-section">
+
+            <h2>Air Quality Index</h2>
+
+            <div class="aqi-card">
+
+                <h3 id="aqiValue">--</h3>
+
+                <p id="aqiText">Loading AQI...</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SMART INSIGHTS -->
+
+        <div class="insight-section">
+
+            <h2>Smart Weather Insights</h2>
+
+            <div class="insight-card">
+
+                <p id="weatherAdvice"></p>
+
+            </div>
+
+        </div>
+
+        
+        <!-- HOURLY FORECAST -->
+
+        <div class="hourly-section">
+
+            <h2>Hourly Forecast</h2>
+
+            <div class="hourly-container"
+                id="hourlyContainer">
+
+            </div>
+
+        </div>
+
+
+        <!-- FORECAST -->
+
+        <div class="forecast-section">
+
+            <h2>5-Day Forecast</h2>
+
+            <div class="forecast-container"
+                id="forecastContainer">
+
+            </div>
+
+        </div>
+
+
+        <!-- MAP -->
+
+        <div class="map-section">
+
+            <h2>Weather Map</h2>
+
+            <div id="map"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LEAFLET JS -->
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- JS -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
